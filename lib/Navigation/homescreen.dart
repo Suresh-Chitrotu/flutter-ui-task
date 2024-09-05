@@ -291,7 +291,7 @@ Widget _buildImageCarousel() {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: const Text(
-              '₹12,999', // Example price, you can dynamically load this
+              '₹12,999', 
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
