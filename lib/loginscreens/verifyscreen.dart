@@ -1,6 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:task/Navigation/bottomnavscreen.dart';
+import 'package:task/Navigation/homescreen.dart'; 
 
 class OTPVerificationScreen extends StatefulWidget {
   const OTPVerificationScreen({super.key});
@@ -48,7 +49,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
           onPressed: () {
-            // Handle back navigation
+            Navigator.pop(context); 
           },
         ),
       ),
@@ -61,10 +62,10 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
             children: [
               const SizedBox(height: 20),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start, // Aligns the row to the start
+                mainAxisAlignment: MainAxisAlignment.start, 
                 children: [
                   Image.asset(
-                    'assets/Screenshot 2024-09-05 191224.png', // Replace with your image asset path
+                    'assets/Screenshot 2024-09-05 191224.png', 
                     height: 100,
                   ),
                 ],
@@ -114,7 +115,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                           },
                         ),
                       ),
-                      if (index < 3) const SizedBox(width: 10), // Adjust the spacing
+                      if (index < 3) const SizedBox(width: 10), 
                     ],
                   );
                 }),
@@ -132,7 +133,10 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                   ),
                   TextButton(
                     onPressed: _start == 0 ? () {
-                      Navigator.push(context,MaterialPageRoute(builder: (context)=>MyExample()));
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomescreenPage()),
+                      ); 
                     } : null,
                     child: Text(
                       'SEND AGAIN',

@@ -6,14 +6,14 @@ import 'package:task/Navigation/homescreen.dart';
 import 'package:task/Navigation/profilescreen.dart';
 import 'package:task/Themes/colorpickerscreen.dart';
 
-class MyExample extends StatefulWidget {
-  const MyExample({super.key});
+class Bottomnavigationscreen extends StatefulWidget {
+  const Bottomnavigationscreen({super.key});
 
   @override
-  _MyExampleState createState() => _MyExampleState();
+  _BottomnavigationscreenState createState() => _BottomnavigationscreenState();
 }
 
-class _MyExampleState extends State<MyExample> {
+class _BottomnavigationscreenState extends State<Bottomnavigationscreen> {
   int _selectedIndex = 0;
   DateTime? _lastPressedAt;
   final List<int> _navigationStack = [];

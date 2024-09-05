@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class HomescreenPage extends StatefulWidget {
@@ -17,14 +16,14 @@ class _HomescreenPageState extends State<HomescreenPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             const SizedBox(height: 10),
+            const SizedBox(height: 10),
             _buildImageCarousel(),
             const SizedBox(height: 10),
             _buildKycPendingBox(),
             const SizedBox(height: 20),
             _buildCategoryIcons(),
             const SizedBox(height: 20),
-            _buildExclusiveForYouSection(), // Exclusive product section
+            _buildExclusiveForYouSection(),
           ],
         ),
       ),
@@ -33,71 +32,69 @@ class _HomescreenPageState extends State<HomescreenPage> {
   }
 
   AppBar _buildAppBar() {
-  return AppBar(
-    backgroundColor:Colors.white,
-    elevation: 1,
-    leading: IconButton(
-      icon: const Icon(Icons.menu, color: Colors.black),
-      onPressed: () {},
-    ),
-    title: Container(
-      height: 45, 
-      decoration: BoxDecoration(
-        color: Colors.transparent, 
-        borderRadius: BorderRadius.circular(30), 
-      ),
-      padding: const EdgeInsets.symmetric(horizontal: 16), 
-      child: TextField(
-        decoration: InputDecoration(
-          filled: true, 
-          fillColor: Color.fromARGB(255, 217, 213, 213), 
-          hintText: 'Search here',
-          suffixIcon: const Icon(Icons.search, color: Colors.black), 
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10), 
-            borderSide: BorderSide.none,
-          ),
-        ),
-      ),
-    ),
-    actions: [
-      IconButton(
-        icon: const Icon(Icons.notifications, color: Colors.black),
+    return AppBar(
+      backgroundColor: Colors.white,
+      elevation: 1,
+      leading: IconButton(
+        icon: const Icon(Icons.menu, color: Colors.black),
         onPressed: () {},
       ),
-    ],
-  );
-}
-
-
-Widget _buildImageCarousel() {
-  return Container(
-    height: 150, // Height remains the same
-    color: Colors.grey.shade200,
-    padding: const EdgeInsets.symmetric(horizontal: 20), // Padding to adjust horizontal space
-    child: PageView(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Image.asset(
-            'assets/Screenshot 2024-09-05 180954.png',
-            fit: BoxFit.cover,
-            width: double.infinity, // Width reduced inside a centered PageView
+      title: Container(
+        height: 45,
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(30),
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: TextField(
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Color.fromARGB(255, 217, 213, 213),
+            hintText: 'Search here',
+            suffixIcon: const Icon(Icons.search, color: Colors.black),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+              borderSide: BorderSide.none,
+            ),
           ),
         ),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(10),
-          child: Image.asset(
-            'assets/Screenshot 2024-09-05 180954.png',
-            fit: BoxFit.cover,
-            width: double.infinity,
-          ),
+      ),
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.notifications, color: Colors.black),
+          onPressed: () {},
         ),
       ],
-    ),
-  );
-}
+    );
+  }
 
+  Widget _buildImageCarousel() {
+    return Container(
+      height: 150,
+      color: Colors.grey.shade200,
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: PageView(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              'assets/Screenshot 2024-09-05 180954.png',
+              fit: BoxFit.cover,
+              width: double.infinity,
+            ),
+          ),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              'assets/Screenshot 2024-09-05 180954.png',
+              fit: BoxFit.cover,
+              width: double.infinity,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
   Widget _buildKycPendingBox() {
     return Padding(
@@ -134,7 +131,7 @@ Widget _buildImageCarousel() {
             const SizedBox(height: 10),
             GestureDetector(
               onTap: () {
-                // Handle "Click Here" action
+               
               },
               child: Center(
                 child: Text(
@@ -168,7 +165,8 @@ Widget _buildImageCarousel() {
     );
   }
 
-  Widget _buildCategoryIcon(IconData icon, String label, Color backgroundColor) {
+  Widget _buildCategoryIcon(
+      IconData icon, String label, Color backgroundColor) {
     return Column(
       children: [
         CircleAvatar(
@@ -184,7 +182,7 @@ Widget _buildImageCarousel() {
 
   Widget _buildExclusiveForYouSection() {
     return Container(
-      color:Color.fromARGB(255, 103, 151, 190),
+      color: Color.fromARGB(255, 103, 151, 190),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
@@ -202,15 +200,14 @@ Widget _buildImageCarousel() {
                       color: Colors.white,
                     ),
                   ),
-                  Spacer(), 
+                  Spacer(),
                   Icon(
-                    Icons.arrow_forward, 
-                    color: Colors.white, 
+                    Icons.arrow_forward,
+                    color: Colors.white,
                   ),
                 ],
               ),
             ),
-
             SizedBox(height: 10),
             GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
@@ -224,8 +221,8 @@ Widget _buildImageCarousel() {
               itemCount: 4,
               itemBuilder: (context, index) {
                 return _buildProductCard(
-                  productName: 'Nokia 8.1 (Iron, 64GB)', 
-                  discount: '32% Off', 
+                  productName: 'Nokia 8.1 (Iron, 64GB)',
+                  discount: '32% Off',
                   image: 'assets/Screenshot 2024-09-06 002107.png',
                 );
               },
@@ -254,7 +251,7 @@ Widget _buildImageCarousel() {
             children: [
               Image.asset(
                 image,
-                height: 100,
+                height: 300,
                 width: double.infinity,
                 fit: BoxFit.cover,
               ),
@@ -262,7 +259,8 @@ Widget _buildImageCarousel() {
                 top: 8,
                 right: 8,
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                   decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(4),
@@ -291,7 +289,7 @@ Widget _buildImageCarousel() {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: const Text(
-              '₹12,999', 
+              '₹12,999',
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
@@ -305,14 +303,12 @@ Widget _buildImageCarousel() {
 
   FloatingActionButton _buildFloatingActionButton() {
     return FloatingActionButton(
-      onPressed: () {
-        // Handle Chat action
-      },
+      onPressed: () {},
       backgroundColor: Colors.red,
-      child: Icon(Icons.chat,color: Colors.white,),
+      child: Icon(
+        Icons.chat,
+        color: Colors.white,
+      ),
     );
   }
 }
-
-
-

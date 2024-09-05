@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task/Themes/colorpickerscreen.dart';
 import 'package:task/loginscreens/signupscreen.dart';
 import 'package:task/loginscreens/verifyscreen.dart';
 
@@ -131,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
+                      backgroundColor:ButtonColor,
                       minimumSize: const Size(double.infinity, 50),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
@@ -139,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: const Text(
                       'SEND CODE',
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 18,color:Colors.white),
                     ),
                   ),
                 ),

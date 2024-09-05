@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task/Navigation/bottomnavscreen.dart';
+import 'package:task/Themes/colorpickerscreen.dart';
+import 'package:task/loginscreens/verifyscreen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -95,10 +96,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   alignment: Alignment.bottomRight,
                   child: FloatingActionButton(
                     onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyExample()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>OTPVerificationScreen()));
                     },
-                    backgroundColor: Colors.redAccent,
-                    child: const Icon(Icons.arrow_forward),
+                    backgroundColor:ButtonColor,
+                    child: Icon(Icons.arrow_forward),
                   ),
                 ),
               ],
