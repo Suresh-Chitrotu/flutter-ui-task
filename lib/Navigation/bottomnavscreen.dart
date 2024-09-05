@@ -77,21 +77,21 @@ class _BottomnavigationscreenState extends State<Bottomnavigationscreen> {
         customBottomBarItems: [
           CustomBottomBarItems(
             label: 'Home',
-            icon: Icons.support,
+            icon: Icons.home,
             isAssetsImage: false,
           ),
           CustomBottomBarItems(
-            label: 'Update',
-            icon: Icons.update,
+            label: 'Categories',
+            icon: Icons.list,
             isAssetsImage: false,
           ),
           CustomBottomBarItems(
-            label: 'Download',
-            icon: Icons.download,
+            label: 'Cart',
+            icon: Icons.card_travel,
             isAssetsImage: false,
           ),
           CustomBottomBarItems(
-            label: 'My Profile',
+            label: 'Profile',
             icon: Icons.person,
             isAssetsImage: false,
           ),
